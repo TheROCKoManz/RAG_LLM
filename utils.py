@@ -13,7 +13,7 @@ HOME = os.getcwd()
 os.environ['OPENAI_API_KEY']=input('Enter your <OPENAI-API-KEY>: ')
 
 def load_data():
-  documents = f'/{HOME}/RAG_LLM/KnowledgeBase'
+  documents = f'{HOME}/KnowledgeBase'
   loader = DirectoryLoader(documents)
   data = loader.load()
   return data
