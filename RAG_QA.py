@@ -22,6 +22,8 @@ def AskQuestion():
 
     while(True):
         question = input("\nYour question: ")
+        if len(question) == 0:
+            continue
         print('\nAI-Says:', end='')
         print(qa_model({"query": question})['result'])
         
