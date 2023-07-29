@@ -42,7 +42,8 @@ def build_model():
 
   QA_CHAIN_PROMPT = PromptTemplate.from_template(template)
 
-  llm = OpenAI(model_name="text-davinci-002", callbacks=[StreamingStdOutCallbackHandler()], temperature = 0.7)
+#  llm = OpenAI(model_name="text-davinci-002", callbacks=[StreamingStdOutCallbackHandler()], temperature = 0.7)
+  llm = OpenAI(model_name="gpt-3.5-turbo", callbacks=[StreamingStdOutCallbackHandler()], temperature = 0.7)
 
   qa_model = RetrievalQA.from_chain_type(
     llm,

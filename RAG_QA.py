@@ -24,10 +24,10 @@ def AskQuestion():
         question = input("\nYour question: ")
         print('\nAI-Says:', end='')
         print(qa_model({"query": question})['result'])
-
-        cont=input('\n\nDo you want to ask any other Questions?(Y/N):')
-        if cont.lower()[0]=='n':
-          break
+        
+        nxt = input().lower()
+        if len(nxt)>0 and nxt in ['quit','exit','close','stop']:
+            break
     
     print('\n\nThank You for using this Document Retriever. Hope to see you soon again...!!\n\n')
     
