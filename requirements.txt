@@ -1,0 +1,5 @@
+unstructured
+openai
+langchain 
+chromadb 
+tiktoken
