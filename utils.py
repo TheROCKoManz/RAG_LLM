@@ -10,17 +10,7 @@ from langchain.chains import RetrievalQA
 import subprocess
 
 HOME = os.getcwd()
-
-def install_requirements():
-  os.environ['OPENAI_API_KEY']=input('Enter your <OPENAI-API-KEY>: ')
-  try:
-      subprocess.check_call(['pip', 'install', '-r', f'{HOME}/requirements.txt'])
-      print("Requirements installation successful.")
-  except subprocess.CalledProcessError as e:
-      print(f"Error: Failed to install requirements. {e}")
-  except FileNotFoundError:
-      print("Error: 'pip' command not found. Please make sure Python and pip are correctly installed.")
-
+os.environ['OPENAI_API_KEY']=input('Enter your <OPENAI-API-KEY>: ')
 
 def load_data():
   documents = f'/{HOME}/RAG_LLM/KnowledgeBase'

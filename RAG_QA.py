@@ -3,7 +3,7 @@ filterwarnings('ignore')
 
 from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI
-from utils import build_model, install_requirements
+from utils import build_model
 import os
 from langchain.llms import OpenAI
 
@@ -31,6 +31,5 @@ def AskQuestion():
 
     
 if __name__ == "__main__":
-    install_requirements()
     AskQuestion()
     os.environ['OPENAI_API_KEY']=''
