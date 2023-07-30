@@ -2,9 +2,9 @@
 
 Usage -----------------------
 
-1. Open CMD in the directory
-
-2. Run: python RAG_QA.py
+1. Open CMD in the main directory (RAG_LLM)
+2. create a Python 3.10 environment and run the command 'pip install -r requirements' to install all the dependencies.
+2. Run 'python RAG_QA.py' to view the working.
 
 ------------------------------
 
@@ -16,3 +16,7 @@ Additional Requirements:
    place the documents in txt/pdf/md formats in KnowledgeBase folder
 
 !! Have Fun !!
+
+-----------------------------
+
+WriteUP file --> Brance_WriteUP_submission.txt
