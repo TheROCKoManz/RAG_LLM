@@ -1,12 +1,11 @@
-from warnings import filterwarnings
-filterwarnings('ignore')
-
 from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI
 from utils import build_model
 import os
 from langchain.llms import OpenAI
 
+from warnings import filterwarnings
+filterwarnings('ignore')
 
 def AskQuestion():
     qa_model = build_model()
@@ -26,15 +25,14 @@ def AskQuestion():
             continue
         print('\nAI-Says:', end='')
         print(qa_model({"query": question})['result'])
-        
-        nxt = input().lower()
-        if len(nxt)>0 and nxt in ['quit','exit','close','stop']:
-            break
-    
-    print('\n\nThank You for using this Document Retriever. Hope to see you soon again...!!\n\n')
-    
 
-    
+        nxt = input().lower()
+        if len(nxt)>0 and nxt in ['quit', 'exit', 'close', 'stop']:
+            break
+
+    print('\n\nThank You for using this Document Retriever. Hope to see you soon again...!!\n\n')
+
+
 if __name__ == "__main__":
     AskQuestion()
-    os.environ['OPENAI_API_KEY']=''
+    os.environ['OPENAI_API_KEY'] = ''
